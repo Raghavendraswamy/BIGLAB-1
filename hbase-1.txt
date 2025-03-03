@@ -1,0 +1,20 @@
+Create: Creates a new table identified by 'table1' and Column Family identified by 'colf'.
+Put: Inserts a new record into the table with row identified by 'row..'
+Scan: returns the data stored in table
+Get: Returns the records matching the row identifier provided in the table
+Help: Get a list of commands
+
+-------------------------------------------------
+create 'table1', 'colf'  
+list 'table1'  
+put 'table1', 'row1', 'colf:a', 'value1'  
+put 'table1', 'row1', 'colf:b', 'value2'  
+put 'table1', 'row2', 'colf:a', 'value3'  
+scan 'table1'  
+get 'table1', 'row1' 
+---------------------------------------------------
+https://www.guru99.com/hbase-shell-general-commands.html
+---------------------------------------------------------https://data-flair.training/blogs/hbase-commands/
+------------------------------------------------------
+
+
