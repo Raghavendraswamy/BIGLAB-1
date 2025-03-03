@@ -1,0 +1,3 @@
+bag1= load 'emp111.txt' using PigStorage(',')as (eno:int,ename:chararray,sal:int);
+bag2= foreach bag1 generate SIZE(ename);
+dump bag2;

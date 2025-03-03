@@ -1,0 +1,2 @@
+A= load 'emp111.txt' using TextLoader();
+dump A;

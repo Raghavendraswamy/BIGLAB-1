@@ -1,0 +1,6 @@
+A= load 'emp11.txt' using PigStorage(',')as (eno:int,ename:chararray,sal:int,dname:chararray);
+B= group A by dname;
+C= foreach B generate SUM(A.sal);
+dump C;
+
+      

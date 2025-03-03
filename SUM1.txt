@@ -1,0 +1,4 @@
+bag1= load 'emp22.txt' using PigStorage(',')as (eno:int,ename:chararray,sal:int,dname:chararray);
+bag2= group bag1 all;
+bag3= foreach bag2 generate  SUM(bag1.sal);
+store bag3 into 'sumop' using PigStorage(',');

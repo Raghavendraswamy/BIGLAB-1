@@ -1,0 +1,7 @@
+myfile= load 'wc.txt' as line:chararray;
+words= foreach myfile generate flatten(TOKENIZE(line)) as word;
+grpd= group words by word;
+ctnd= foreach grpd generate group, COUNT(words) as count;
+ordered= order ctnd by count desc;
+dump ordered;
+             

@@ -1,0 +1,4 @@
+bag1= load 'ss1.txt' using PigStorage(',')as (dd:int,mm:int,yy:int);
+bag2= foreach bag1 generate  TOMAP(dd, mm);
+dump bag2;
+

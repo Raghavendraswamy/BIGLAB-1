@@ -1,0 +1,4 @@
+bag1= load 'emp111.txt' using PigStorage(',')as (eno:int,ename:chararray,sal:int);
+bag2= filter bag1 by sal > 34000;
+store bag2 into 'pigoutput11' using PigStorage(',');
+
